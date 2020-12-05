@@ -1,13 +1,13 @@
 - fig:
   title: "Fig. 1: Paleo cardigan kombucha, pickled brunch shabby chic "
-  filename: script1.py
+  filename: labelling.py
   desc:  Used to generate the figure1
   pic: fig1.png
   req:
     - ds: 
       storage: remote
-      title: Dataset 1
-      link: "http://data.caltech.edu"
+      title: Time to catastrophe
+      link: gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig:
   title: "Fig. 2: Activated charcoal tilde kombucha. "
