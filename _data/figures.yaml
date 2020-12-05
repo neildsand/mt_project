@@ -1,12 +1,12 @@
 - fig:
-  title: "Fig. 1: Paleo cardigan kombucha, pickled brunch shabby chic "
+  title: "Fig. 1: ECDF of Time to Catastrophe for Labeled and Unlabeled Tubulin "
   filename: labelling.py
   desc:  Used to generate the figure1
   pic: fig1.png
   req:
     - ds: 
       storage: remote
-      title: Time to catastrophe
+      title: Time to catastrophe in Labelled and Unlabeled Tubulin
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig:
