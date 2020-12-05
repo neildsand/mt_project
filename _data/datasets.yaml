@@ -1,8 +1,8 @@
 - dataset:
   storage: local
-  name: Sampling statistics from some fancy experiment
+  name: Time to Catastrophe
   filetype: ".csv"
-  link: dataset1.csv
+  link: gardner_time_to_catastrophe_dic_tidy.csv
   filesize: "24 MB"
 
 - dataset:
