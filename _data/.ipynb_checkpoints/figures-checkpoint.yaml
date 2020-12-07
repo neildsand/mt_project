@@ -12,8 +12,7 @@
 - fig:
   title: "Fig. 2: 95% Confidence Interval for the MLE of Time to Catastrophe"
   filename: fig2.py
-  desc: 
-    	Confidence interval for the MLE of times to catstrophe for tublulin.
+  desc: Confidence interval for the MLE of times to catstrophe for tublulin.
   pic: fig2.png
   req:
     - ds: 
@@ -24,8 +23,7 @@
 - fig: 
   title: "Fig. 3: Gamma Model Predictive ECDF"
   filename: fig3.py
-  desc:
-        Predicted ECDF of microtuble catastrophe times distributed by the Gamma model.
+  desc: Predicted ECDF of microtuble catastrophe times distributed by the Gamma model.
   pic: fig3.png
   req:
     - ds:
@@ -36,8 +34,7 @@
 - fig:
   title: "Fig. 4: Gamma Model Difference between Predictive and Measured ECDF "
   filename: fig4.py
-  desc:
-      Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Gamma model.
+  desc: Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Gamma model.
   pic: fig4.png
   req:
     - ds:
