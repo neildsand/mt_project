@@ -50,7 +50,13 @@ Analysis:  >
   
   In order to monitor microtubules, Garner, Zanic, et al. labeled tubulin with a fluorescent marker.  Because we are interested in the time to microtubule catastrophe, it is important to ensure that fluorescent labels and exposure to laser light did not affect the microtubule dynamics which would compromise the results.  As such, Garner, Zanic, et al. performed an experiment using DIC microscopy in order to measure time to catastrophe for labeled and unlabeled tubulin.  Figure 1 demonstrates an ECDF with confidence intervals of this data.  From this inital ECDF, we already hypothesize that the labeled and unlabeled tubulin are distributed identically, meaning that the fluorescence is not affected the time to microtubule catastrophe, meaning the experimental procedure is sound.  In order to support this hypothesis, we used non-parametric inference in order to compute confidence intervals for the plug-in estimate for the mean time to catastrophe for each tubulin type.  Figure 2 displays these confidence intervals.  The overlap present provides additional support to our hypothesis.  Finally, we perform a null-hypothesis test under the null hypothesis that the distribution of microtubule catastrophe times with labeled tubulin is the same as unlabeled tubulin.  We use the difference of means as our test statistic, and compute a p-value of 0.77.  From the combination of all this analysis, we conclude that the labeled and unlabeled tubulin follow the same distribution and therefore we can accept the experimental procedure of fluorescent labeling.
   
+  Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible.  We will consider the model assumed by Garner, Zanic, et al., that the microtubule catastrophe times are Gamma Distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson Model.  
   
+  (Talk about generating the models)
+  
+  (Perform model assessment)
+  
+  Our final piece of analysis investigates the microtubule catastrophe under different concentrations of tubulin. 
   
   
 Acknowledgments: > 
