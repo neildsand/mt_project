@@ -45,6 +45,7 @@ Abstract: >
   disrupt deep v ugh, banjo truffaut distillery flannel la croix copper mug. Af
   8-bit tattooed asymmetrical mumblecore swag direct trade iPhone disrupt
   exercitation mixtape.
+
 Introduction:  >
   Throughout the term, we explored the dataset investigated by Gardner, Zanic, and coworkers.  Our goal was to investigate the dynamics of microtubule catastrophe, and more specifically, to gain insights around the time between the start of of growth for a microtubule to the catastrophe event.  Our analysis was centered around three main pieces.  First, we had to test the experimentally procedure.  Second, we developed a generative model for the time to catastrophe of the microtubules.  Finally, we explore the relationship between tubulin concentration and time to catastrophe.
   
@@ -65,6 +66,7 @@ Analysis of Generative Model for Time to Catastrophe:  >
   Our final piece of analysis investigates the microtubule catastrophe under different concentrations of tubulin. 
  
 Analysis of Tubulin Concentration on Time to Catastrophe:  >
+ text
   
 Acknowledgments: > 
   Who helped you? Share the love! Valeria Rivera, Destiny Roach, Alberto 
