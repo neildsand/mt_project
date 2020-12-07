@@ -7,7 +7,7 @@
     - ds: 
       storage: remote
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig:
   title: "Fig. 2: 95% Confidence Interval for the MLE of Time to Catastrophe"
@@ -18,7 +18,7 @@
     - ds: 
       storage: remote
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig: 
   title: "Fig. 3: Gamma Model Predictive ECDF"
@@ -29,7 +29,7 @@
     - ds:
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig:
   title: "Fig. 4: Gamma Model Difference between Predictive and Measured ECDF "
@@ -40,7 +40,7 @@
     - ds:
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig: 
   title: "Fig. 5: Poisson Model Predictive ECDF"
@@ -52,7 +52,7 @@
     - ds:
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig:
   title: "Fig. 6: Poisson Model Difference between Predictive and Measured ECDF "
@@ -64,7 +64,7 @@
     - ds:
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
 
 - fig: 
   title: "Fig. 7: ECDF of Mictrobule Catastrophe Times at Different Concentrations"
@@ -76,7 +76,7 @@
     - ds:
       title: Time to microtuble catastrophe at different concentrations.
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv"
       
 - fig:
   title: "Fig. 8: Alpha MLEs with 95% Confidence Interval "
@@ -88,7 +88,7 @@
     - ds:
       title: Time to microtuble catastrophe at different concentrations.
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv"
       
 - fig:
   title: "Fig. 9: Beta MLEs with 95% Confidence Interval "
@@ -100,4 +100,4 @@
     - ds:
       title: Time to microtuble catastrophe at different concentrations.
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv"
