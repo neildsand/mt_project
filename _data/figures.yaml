@@ -47,7 +47,7 @@
 
 - fig: 
   title: "Fig. 5: Poisson Model Predictive ECDF"
-  filename: fig3.py
+  filename: fig5.py
   desc:
         Predicted ECDF of microtuble catastrophe times distributed by the Poisson model.
   pic: fig5.png
@@ -62,9 +62,45 @@
   filename: fig6.py
   desc:
       Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Poisson model.
-  pic: fig4.png
+  pic: fig6.png
   req:
     - ds:
       title: Time to catastrophe in Labelled and Unlabeled Tubulin
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+
+- fig: 
+  title: "Fig. 7: ECDF of Mictrobule Catastrophe Times at Different Concentrations"
+  filename: fig7.py
+  desc:
+        Exploratory data analysis on a microtuble catastrophe times at different concentrations dataset.
+  pic: fig7.png
+  req:
+    - ds:
+      title: Time to microtuble catastrophe at different concentrations.
+      storage: remote
+      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      
+- fig:
+  title: "Fig. 8: Alpha MLEs with 95% Confidence Interval "
+  filename: fig8.py
+  desc:
+      95% confidence interval for the MLEs of the alpha parameter.
+  pic: fig8.png
+  req:
+    - ds:
+      title: Time to microtuble catastrophe at different concentrations.
+      storage: remote
+      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      
+- fig:
+  title: "Fig. 9: Beta MLEs with 95% Confidence Interval "
+  filename: fig9.py
+  desc:
+      95% confidence interval for the MLEs of the beta parameter.
+  pic: fig9.png
+  req:
+    - ds:
+      title: Time to microtuble catastrophe at different concentrations.
+      storage: remote
+      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
