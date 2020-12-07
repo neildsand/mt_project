@@ -10,9 +10,9 @@
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig:
-  title: "Fig. 2: 95% Confidence Interval for the MLE of Time to Catastrophe"
+  title: "Fig. 2: 95% Confidence Interval for the Plug-in Estimate of the Mean Time to Catastrophe"
   filename: fig2.py
-  desc: Confidence interval for the MLE of times to catstrophe for tublulin.
+  desc: Confidence interval for the Plug-in Estimate of the mean time catstrophe for tublulin.
   pic: fig2.png
   req:
     - ds: 
