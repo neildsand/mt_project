@@ -21,9 +21,9 @@
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig: 
-  title: "Fig. 3: Gamma Model Predictive ECDF"
+  title: "Fig. 3: Gamma and Poisson Model Comparison"
   filename: fig3.py
-  desc: Predicted ECDF of microtuble catastrophe times distributed by the Gamma model.
+  desc: Comparing and evaluating the results for microtuble catastrophe times distributed by the Gamma model and the Poisson model.
   pic: fig3.png
   req:
     - ds:
@@ -31,71 +31,71 @@
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
-- fig:
-  title: "Fig. 4: Gamma Model Difference between Predictive and Measured ECDF "
+# - fig:
+#   title: "Fig. 4: Gamma Model Difference between Predictive and Measured ECDF "
+#   filename: fig4.py
+#   desc: Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Gamma model.
+#   pic: fig4.png
+#   req:
+#     - ds:
+#       title: Time to catastrophe in Labelled and Unlabeled Tubulin
+#       storage: remote
+#       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+
+# - fig: 
+#   title: "Fig. 5: Poisson Model Predictive ECDF"
+#   filename: fig5.py
+#   desc:
+#         Predicted ECDF of microtuble catastrophe times distributed by the Poisson model.
+#   pic: fig5.png
+#   req:
+#     - ds:
+#       title: Time to catastrophe in Labelled and Unlabeled Tubulin
+#       storage: remote
+#       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+
+# - fig:
+#   title: "Fig. 6: Poisson Model Difference between Predictive and Measured ECDF "
+#   filename: fig6.py
+#   desc:
+#       Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Poisson model.
+#   pic: fig6.png
+#   req:
+#     - ds:
+#       title: Time to catastrophe in Labelled and Unlabeled Tubulin
+#       storage: remote
+#       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+
+- fig: 
+  title: "Fig. 4: ECDF of Mictrobule Catastrophe Times at Different Concentrations"
   filename: fig4.py
-  desc: Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Gamma model.
+  desc:
+        Exploratory data analysis on a microtuble catastrophe times at different concentrations dataset.
   pic: fig4.png
   req:
     - ds:
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
+      title: Time to microtuble catastrophe at different concentrations.
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
-
-- fig: 
-  title: "Fig. 5: Poisson Model Predictive ECDF"
+      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      
+- fig:
+  title: "Fig. 5: Alpha MLEs with 95% Confidence Interval "
   filename: fig5.py
   desc:
-        Predicted ECDF of microtuble catastrophe times distributed by the Poisson model.
+      95% confidence interval for the MLEs of the alpha parameter.
   pic: fig5.png
   req:
     - ds:
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
+      title: Time to microtuble catastrophe at different concentrations.
       storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
-
+      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+      
 - fig:
-  title: "Fig. 6: Poisson Model Difference between Predictive and Measured ECDF "
+  title: "Fig. 6: Beta MLEs with 95% Confidence Interval "
   filename: fig6.py
   desc:
-      Difference between the predicted and measured ECDF of microtuble catastrophe times distributed by the Poisson model.
-  pic: fig6.png
-  req:
-    - ds:
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
-      storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
-
-- fig: 
-  title: "Fig. 7: ECDF of Mictrobule Catastrophe Times at Different Concentrations"
-  filename: fig7.py
-  desc:
-        Exploratory data analysis on a microtuble catastrophe times at different concentrations dataset.
-  pic: fig7.png
-  req:
-    - ds:
-      title: Time to microtuble catastrophe at different concentrations.
-      storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
-      
-- fig:
-  title: "Fig. 8: Alpha MLEs with 95% Confidence Interval "
-  filename: fig8.py
-  desc:
-      95% confidence interval for the MLEs of the alpha parameter.
-  pic: fig8.png
-  req:
-    - ds:
-      title: Time to microtuble catastrophe at different concentrations.
-      storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
-      
-- fig:
-  title: "Fig. 9: Beta MLEs with 95% Confidence Interval "
-  filename: fig9.py
-  desc:
       95% confidence interval for the MLEs of the beta parameter.
-  pic: fig9.png
+  pic: fig6.png
   req:
     - ds:
       title: Time to microtuble catastrophe at different concentrations.
