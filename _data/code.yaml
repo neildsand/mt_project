@@ -1,5 +1,5 @@
 - script:
-  name: [mtanalysis](https://github.com/neildsand/mt_project/tree/gh-pages/mtanalysis/software_module)
+  name: mtanalysis
   desc: >
     Software package including all the code performed in this analysis.
 
