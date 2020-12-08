@@ -6,18 +6,18 @@
   req:
     - ds: 
       storage: remote
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
+      title: Microtubule Time to Catastrophe Data for Labeled and Unlabeled Tubulin 
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig:
-  title: "Fig. 2: 95% Confidence Interval for the MLE of Time to Catastrophe"
+  title: "Fig. 2: 95% Confidence Interval for the Plug-in Estimate of the Mean Time to Catastrophe"
   filename: fig2.py
-  desc: Confidence interval for the MLE of times to catstrophe for tublulin.
+  desc: Confidence interval for the Plug-in Estimate of the mean time catstrophe for tublulin.
   pic: fig2.png
   req:
     - ds: 
       storage: remote
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
+      title: Microtubule Time to Catastrophe Data for Labeled and Unlabeled Tubulin 
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
 - fig: 
@@ -27,7 +27,7 @@
   pic: fig3.png
   req:
     - ds:
-      title: Time to catastrophe in Labelled and Unlabeled Tubulin
+      title: Microtubule Time to Catastrophe Data for Labeled and Unlabeled Tubulin 
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
 
@@ -74,7 +74,7 @@
   pic: fig4.png
   req:
     - ds:
-      title: Time to microtuble catastrophe at different concentrations.
+      title: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
       
@@ -86,7 +86,7 @@
   pic: fig5.png
   req:
     - ds:
-      title: Time to microtuble catastrophe at different concentrations.
+      title: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
       
@@ -98,6 +98,6 @@
   pic: fig6.png
   req:
     - ds:
-      title: Time to microtuble catastrophe at different concentrations.
+      title: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
