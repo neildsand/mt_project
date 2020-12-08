@@ -11,7 +11,7 @@ sidebar: true
 {% if site.data.code %}
 ## Code
 {% for script in site.data.code %}
-* [**{{script.name}}**]({{site.url}}/{{site.baseurl}}/software/{{script.name}})
+* [**{{script.name}}**]({{site.url}}/{{site.baseurl}}/{{script.name}})
   \| {{script.desc}}
 {% endfor %}
 {% endif %}
