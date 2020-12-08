@@ -1,6 +1,5 @@
 - script:
-  name: mtanalysis.py
+  name: mtanalysis
   desc: >
-    Super fancy script which calcualate some complicated stuff with
-    well-documented code.
+    Software package including all the code performed in this analysis.
 
