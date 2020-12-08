@@ -9,23 +9,13 @@
 # of the `page01_people.md` file.
 # ##############################################################################
 - author:
-  name: Dr. Osophila
-  link: "https://en.wikipedia.org/wiki/Drosophila"
-  title: Postdoctoral Scholar
-  img: dr_osophila.jpg
-  institute: Bicoid Institute of Development
-  other_info:
-     Email Address: "flyguy@university.edu"
+  name: Dillon Holder
+  link: "https://github.com/dillonholder"
+  title: Caltech Undergraduate '21
+  institute: Caltech
+     
 - author:
-  name: Dr. Melanie O'Gaster
-  link: "https://en.wikipedia.org/wiki/Drosophila_melanogaster"
-  title: Postdoctoral Scholar
-  img: melanogaster.jpg
-  institute: French Flag Research Institute
-  other_info:
-    Current Location: Apple Juice Plates, Inc
-
-- author:
-  name: Sally Monella
-  title: Research Technician
-  institute: French Flag Research Institute
+  name: Neil Sanderson
+  link: "https://github.com/neildsand"
+  title: Caltech Undergraduate '21
+  institute: Caltech
