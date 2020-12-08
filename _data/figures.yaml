@@ -79,10 +79,10 @@
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
       
 - fig:
-  title: "Fig. 5: Alpha MLEs with 95% Confidence Interval "
+  title: "Fig. 5: Alpha and Beta MLEs with 95% Confidence Interval "
   filename: fig5.py
   desc:
-      95% confidence interval for the MLEs of the alpha parameter.
+      95% confidence interval for the MLEs of the alpha and beta parameters.
   pic: fig5.png
   req:
     - ds:
@@ -90,14 +90,14 @@
       storage: remote
       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
       
-- fig:
-  title: "Fig. 6: Beta MLEs with 95% Confidence Interval "
-  filename: fig6.py
-  desc:
-      95% confidence interval for the MLEs of the beta parameter.
-  pic: fig6.png
-  req:
-    - ds:
-      title: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
-      storage: remote
-      link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+# - fig:
+#   title: "Fig. 6: Beta MLEs with 95% Confidence Interval "
+#   filename: fig6.py
+#   desc:
+#       95% confidence interval for the MLEs of the beta parameter.
+#   pic: fig6.png
+#   req:
+#     - ds:
+#       title: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
+#       storage: remote
+#       link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
