@@ -2,7 +2,7 @@
 layout: page
 title: People
 description: About the authors
-img: caltech.png 
+img: cal.png 
 caption: 
 permalink: people
 sidebar: true
