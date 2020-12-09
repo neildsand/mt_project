@@ -12,7 +12,7 @@
 #     name: python3
 # ---
 
-# +
+
 import numpy as np
 import pandas as pd
 import scipy.optimize
@@ -34,17 +34,16 @@ except:
     import multiprocessing as multiprocess
 
 import holoviews as hv
+import panel as pn
 hv.extension('bokeh')
 
 bebi103.hv.set_defaults()
 
-
-
 # Importing data
 df_cat = pd.read_csv('../data/gardner_time_to_catastrophe_dic_tidy.csv')
+
 # Filtering for labeled data
 cat_lab=np.array(df_cat[df_cat['labeled']==True]['time to catastrophe (s)'])
-
 
 # Defining functions to compute liklihood and MLE for the Gamma distributed model
 
@@ -80,10 +79,7 @@ def mle_iid_gamma(y):
 # Compute MLE
 mle = mle_iid_gamma(cat_lab)
 
-# Print MLE
-print("MLE for the parameters of the Gamma model [alpha, beta]: {}".format(mle))      
-        
-
+# Compute confidence Intervals
 # Random seed
 rg = np.random.default_rng(3252)
 
@@ -129,12 +125,8 @@ bs_reps_cat_lab = draw_bs_reps_mle(
 conf_int_cat_lab = np.percentile(bs_reps_cat_lab, [2.5, 97.5], axis=0)
 
 
-# Report all results in a DataFrame
-sub_df = pd.DataFrame({'parameter': ['alpha','beta'],'MLE':mle, 'conf int low': conf_int_cat_lab[0],'conf int high': conf_int_cat_lab[1]})
-df_h = sub_df.reset_index(drop=True)
 
-
-
+# Poisson Model 
 # Defining functions to compute liklihood and MLE 
 
 def log_like_iid_exp(params,y):
@@ -174,11 +166,11 @@ def mle_iid_exp(y):
     else:
         raise RuntimeError('Convergence failed with message', res.message)
         
-        
+# compute mle
 mle_exp = mle_iid_exp(cat_lab)
-print("MLE for labelled catastrophe: {}".format(mle_iid_exp(cat_lab)))       
-        
-        
+
+
+# compute confidence intervals
 # Random seed
 rg = np.random.default_rng(3252)
 
@@ -222,14 +214,3 @@ bs_reps_exp = draw_bs_reps_mle(
     mle_iid_exp, cat_lab, size=10000, progress_bar=True
 )
 conf_int_exp = np.percentile(bs_reps_exp, [2.5, 97.5], axis=0)
-
-
-# arrays for conf int
-
-# report all results in a DataFrame
-sub_df = pd.DataFrame({'Parameter': ['beta 1','beta 2'],'MLE':[mle_exp[0],mle_exp[1]+mle_exp[0]], 
-                       'conf int low': [conf_int_exp[0][0],conf_int_exp[0][0]+conf_int_exp[0][1]],
-                       'conf int high': [conf_int_exp[1][0],conf_int_exp[1][1]+conf_int_exp[1][0]]
-                      }
-                     )
-df_h = sub_df.reset_index(drop=True)
