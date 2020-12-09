@@ -3,7 +3,7 @@ layout: page
 title: Discussion and Analysis
 description: Information about the project, website, and links to the paper and SI
 img: Tubulin_Infographic.png # Add image post (optional)
-caption: "A Serious Man (2010)"
+caption: [Tubulin Infographic]("https://commons.wikimedia.org/wiki/File:Tubulin_Infographic.jpg")
 permalink: index.html
 sidebar: true
 ---
