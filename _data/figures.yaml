@@ -1,6 +1,6 @@
 - fig:
   title: "Fig. 1: ECDF of Time to Catastrophe for Labeled and Unlabeled Tubulin "
-  filename: labelling.py
+  filename: fig1.py
   desc:  Used to generate the figure1
   pic: fig1.png
   req:
