@@ -18,7 +18,7 @@ Analysis of Generative Model for Time to Catastrophe:  >
   Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible models.  We will consider the model assumed by Gardner, Zanic, et al., that the microtubule catastrophe times are Gamma distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson model.<br>  
   
   
-  The Gamma distribution is well defined.  As such, our shorthand model is $y_i$ ~ Gamma$(\alpha, \beta)$, for which we know the PDF is $f(y;\alpha, \beta) = \frac{1}{\Gamma(\alpha)}\,\frac{(\beta y)^\alpha}{y} \,\mathrm{e}^{-\beta y}$.  We use this to write our log-likehood, ln$(L(\alpha,\beta; y)) = $ln$(f(y;\alpha,\beta))$.<br>
+  The Gamma distribution is well defined.  As such, our shorthand model is $y_i$ ~ Gamma$(\alpha, \beta)$, for which we know the PDF is $f(y;\alpha, \beta) = \frac{1}{\Gamma(\alpha)}\,\frac{(\beta y)^\alpha}{y} \,\mathrm{e}^{-\beta y}$.  We use this to write our log-likehood, $ln(L(\alpha,\beta; y)) = ln(f(y;\alpha,\beta))$.<br>
   
   For our Poisson Model, we need to derive the PDF.
   Let $t_1$ be the time taken for the first process and $t_2$ to be the time taken from $t_1$ to the catastrophe event time, $t$.
