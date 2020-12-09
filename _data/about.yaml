@@ -1,41 +1,32 @@
-# ##############################################################################
-# ABOUT
-# ------------------------------------------------------------------------------
-# This data file contains all information that will be displayed on the home
-# page of your website. The fields `title` and `authors` are necessary. These
-# keys cannot be changed or they will not be displayed on the website. 
-#
-# The remainder of the fileds can be changed to fit your needs. The field name
-# (e.g. abstract, summary, etc) Will appear with as H2 headings on the website.
-# The content below will appear 
 
 title: >
-  Analysis of Microtubule Catastrophe 
+  Analysis of Microtubule Catastrophes
 authors: >
   Dillon Holder, Neil Sanderson
 Abstract: >
-  ABSTRACT GOES HERE.
-
-Introduction:  >
-  Throughout the term, we explored the dataset investigated by Gardner, Zanic, et al.  Our goal was to investigate the dynamics of microtubule catastrophe, and more specifically, to gain insights around the time between the start of of growth for a microtubule to the catastrophe event.  Our analysis was centered around three main pieces.  First, we had to test the experimentally procedure.  Second, we developed a generative model for the time to catastrophe of the microtubules.  Finally, we explore the relationship between tubulin concentration and time to catastrophe.
+  Throughout the term, we explored two datasets investigated by Gardner, Zanic, et al regarding Microtubule Catastrophes.  Our goal was to investigate the dynamics of microtubule catastrophe, and more specifically, to gain insights around the time between the start of of growth for a microtubule to the catastrophe event.  Our analysis was centered around three main pieces.  First, we had to test the experimentally procedure.  Second, we developed a generative model for the time to catastrophe of the microtubules.  Finally, we explore the relationship between tubulin concentration and time to catastrophe.  From our analysis, we were able to arrive at the following conclusions.  The labeled and unlabeled tubulin both follow the same distribution, which means the added fluorescence does not effect microbtubule catastrophes.  Thus the experiemental procedure is sound and there is no need to consider both labeled and unlabeled tubulin.  Secondly, time to catastrophe for microtubules is Gamma distributed.  Lastly, the tubulin concentration does not affect microtubules' times to catastrophe.
   
 Analysis of Experimental Procedure:  >
-  In order to monitor microtubules, Gardner, Zanic, et al. labeled tubulin with a fluorescent marker.  Because we are interested in the time to microtubule catastrophe, it is important to ensure that fluorescent labels and exposure to laser light did not affect the microtubule dynamics which would compromise the results.  As such, Garner, Zanic, et al. performed an experiment using DIC microscopy in order to measure time to catastrophe for labeled and unlabeled tubulin.  [Figure 1](https://neildsand.github.io/mt_project/figures/fig1.png) demonstrates an ECDF with confidence intervals of this data.  From this inital ECDF, we already hypothesize that the labeled and unlabeled tubulin are distributed identically, meaning that the fluorescence is not affected the time to microtubule catastrophe, meaning the experimental procedure is sound.  In order to support this hypothesis, we used non-parametric inference in order to compute confidence intervals for the plug-in estimate for the mean time to catastrophe for each tubulin type.  Figure 2 displays these confidence intervals.  The overlap present provides additional support to our hypothesis.  Finally, we perform a null-hypothesis test under the null hypothesis that the distribution of microtubule catastrophe times with labeled tubulin is the same as unlabeled tubulin.  We use the difference of means as our test statistic, and compute a p-value of 0.77.  From the combination of all this analysis, we conclude that the labeled and unlabeled tubulin follow the same distribution and therefore we can accept the experimental procedure of fluorescent labeling.
+  In order to monitor microtubules, Gardner, Zanic, et al. labeled tubulin with a fluorescent marker.  Because we are interested in the time to microtubule catastrophe, it is important to ensure that fluorescent labels and exposure to laser light did not affect the microtubule dynamics which would compromise the results.  As such, Garner, Zanic, et al. performed an experiment using DIC microscopy in order to measure time to catastrophe for labeled and unlabeled tubulin.  [Figure 1](https://neildsand.github.io/mt_project/figures/fig1.png) demonstrates an ECDF with confidence intervals of this data.  From this inital ECDF, we already hypothesize that the labeled and unlabeled tubulin are distributed identically, meaning that the fluorescence is not affecting the time to microtubule catastrophe, meaning the experimental procedure is sound.  <br>
+  
+  In order to further support this hypothesis, we used non-parametric inference in order to compute confidence intervals for the plug-in estimate for the mean time to catastrophe for each tubulin type.  [Figure 2](https://neildsand.github.io/mt_project/figures/fig2.png) displays these confidence intervals.  The overlap present provides additional support to our hypothesis.  <br>
+  
+  Finally, we perform a null-hypothesis test under the null hypothesis that the distribution of microtubule catastrophe times with labeled tubulin is the same as unlabeled tubulin.  We use the difference of means as our test statistic, and compute a p-value of 0.77.  From the combination of these analyses, we conclude that the labeled and unlabeled tubulin follow the same distribution and therefore we can accept the experimental procedure that involves fluorescent labeling.
   
 Analysis of Generative Model for Time to Catastrophe:  >
   
-  Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible models.  We will consider the model assumed by Gardner, Zanic, et al., that the microtubule catastrophe times are Gamma Distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson Model.<br>  
+  Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible models.  We will consider the model assumed by Gardner, Zanic, et al., that the microtubule catastrophe times are Gamma distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson model.<br>  
   
   
-  The Gamma distribution is well defined.  As such, our shorthand model is $y \approx Gamma(\alpha, \beta)$, for which we know the PDF is $f(y;\alpha, \beta) = \frac{1}{\Gamma(\alpha)}\,\frac{(\beta y)^\alpha}{y} \,\mathrm{e}^{-\beta y}$.  We use this to write our log-likehood, $ln(L(\alpha,\beta; y)) = ln(f(y;\alpha,\beta))$.<br>
+  The Gamma distribution is well defined.  As such, our shorthand model is $y_i$ ~ Gamma$(\alpha, \beta)$, for which we know the PDF is $f(y;\alpha, \beta) = \frac{1}{\Gamma(\alpha)}\,\frac{(\beta y)^\alpha}{y} \,\mathrm{e}^{-\beta y}$.  We use this to write our log-likehood, ln$(L(\alpha,\beta; y)) = $ln$(f(y;\alpha,\beta))$.<br>
   
   For our Poisson Model, we need to derive the PDF.
-  Let $t_1$ be the time taken for the first process and $t_2$ to be the time taken from $t_1$ to the catastrophe event time, $t$. <br>
-  Each can be represented as an exponential distribution and hence be combined like so:<br>
+  Let $t_1$ be the time taken for the first process and $t_2$ to be the time taken from $t_1$ to the catastrophe event time, $t$.
+  We can then represent each process as an exponential distribution and combine them as follows:<br>
     $ f(t_1,t_2) = f(t_1)f(t_2) $ <br>
     $ f(t_1,t_2) = \beta_1\beta_2e^{-\beta_1t_1}e^{-\beta_2t_2} $ <br>
 
-    Then using a change of variables we rewrite the function in terms of $t_1$ and $t$:<br>
+    We then use a change of variables to rewrite the function in terms of $t_1$ and $t$:<br>
     $ t = t_1 + t_2 $ <br>
     $ t_2 = t - t_1 $ <br>
     $ f(t_1,t) = \beta_1\beta_2e^{-\beta_1t_1}e^{\beta_2(t-t_1)} $ <br>
@@ -45,16 +36,24 @@ Analysis of Generative Model for Time to Catastrophe:  >
     $ f(t) = \int_{0}^{t} \beta_1\beta_2e^{-\beta_1t_1}e^{-\beta_2(t-t_1)} \,dt_1 $ <br>
     $ \boxed{f(t) = \frac{\beta_1\beta_2}{\beta_2-\beta_1}(e^{-\beta_1t} - e^{-\beta_2t}) }$<br>
   
-  In order to assess the two models, we want to understand how well matched the proposed generative model is to the actual generative model, which is unknown.  What we do know however, is what data the actual generative model generates, so we will compare data generated by our generative models to the actual data.  
+  In order to assess the two models, we want to understand how well matched the proposed generative model is to the actual generative model, which is unknown.  What we do know however, is what data the actual generative model generates, so we will compare data generated by our generative models to the actual data.  <br>
   
-  We have our log-likehood functions for the parameters of each model.  Thus we can use parametric inference to caculate the MLEs for the parameters of the respective models.  One we obtain these MLEs, we then use them to generate bootstrap samples of the data out of our proposed generative models.  We then visualize this through predictive ECDFs, and the difference between the predictive ECDF's and the data's ECDF.  This is demonstrated in Figure 3.  From the figure, we see that both models appear commensurate with the data.  From the predictive ECDFs, for lower times we see that the Poisson Model may deviate from the data.  This is clear in the difference plot.  Overall, judging from the difference plot, the Gamma model appears to be the model better suited for the data.  Thus, we conclude the time to catastrophe is Gamma Distributed with MLEs for alpha at 2.4 and beta 0.005.
+  
+  We have our log-likehood functions for the parameters of each model.  Thus we can use parametric inference to calculate the MLEs for the parameters of the respective models.  One we obtain these MLEs, we then use them to generate bootstrap samples of the data out of our proposed generative models.  We then visualize this through predictive ECDFs, and the difference between the predictive ECDF's and the data's ECDF.  This is demonstrated in [Figure 3](https://neildsand.github.io/mt_project/figures/fig3.png).<br>
+  
+  
+  From the figure, we see that both models appear commensurate with the data.  From the predictive ECDFs, for lower times we see that the Poisson Model may deviate from the data.  This is clear in the difference plot.  Overall, judging from the difference plots, the Gamma model appears to be the model better suited for the data.  Thus, we conclude the time to catastrophe is Gamma Distributed.  The MLEs we calculated were $\alpha = 2.4$ and $\beta= 0.005$.
   
   
  
 Analysis of Tubulin Concentration on Time to Catastrophe:  >
- Our final piece of analysis investigates the microtubule catastrophe under different concentrations of tubulin. Figure 4 demonstrates the available data in the collected by Gardner, Zanic, et al.  From the plot of the time to catastrophe for the different tubulin concentrations, it appears that for higher concentrations the microtubules may take longer before a catastrophe.  
+ Our final piece of analysis investigates the microtubule catastrophe under different concentrations of tubulin. [Figure 4](https://neildsand.github.io/mt_project/figures/fig4.png) demonstrates the available data collected by Gardner, Zanic, et al.  From the plot of the time to catastrophe for the different tubulin concentrations, it appears that for higher concentrations the microtubules may take longer before a catastrophe.<br>
  
- In order to test this more concretely, we obtain parameter estimates for each tubulin concentration.  Because we previously established that the data followed a Gamma distribution, we obtain estimates for alpha and beta.  Figure 5 displays the confidence intervals for these parameters.  The bootstrapping technique employed provides a more reliable understanding than simply the ECDF of the data because it provides inference on how the results would change if the experiment were repeated.  From Figure 5, we are able to conclude that rate of catastrophe does not change with tubulin concentration.  We know that Beta is the rate of arrivals in Gamma distribution, so the fact that there is significant overlap in the confidence intervals for Beta indicates that this rate does not change accross the different concentrations. 
+ 
+ In order to test this more concretely, we obtain parameter estimates for each tubulin concentration.  Because we previously established that the data followed a Gamma distribution, we obtain estimates for alpha and beta.  [Figure 5](https://neildsand.github.io/mt_project/figures/fig5.png) displays the confidence intervals for these parameters.  The bootstrapping technique employed provides a more reliable understanding than simply the ECDF of the data because it provides inference on how the results would change if the experiment were repeated.<br>
+
+
+ From Figure 5, we are able to conclude that rate of catastrophe does not change with tubulin concentration.  We know that Beta is the rate of arrivals in Gamma distribution, so the fact that there is significant overlap in the confidence intervals for Beta indicates that this rate does not change accross the different concentrations. 
   
 Acknowledgments: > 
-  Justin Bois, Griffin Chure, and the BE/Bi 103a Fall 2020 TAs
+  We would like to thank Justin Bois and BE/Bi 103a Fall 2020 TAs for all the instruction and assistance they provided. We would also like to thank Griffin Chure, whose website and repository template we used to create this site. 

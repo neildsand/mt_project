@@ -2,8 +2,8 @@
 layout: page
 title: People
 description: About the authors
-img: people.png 
-caption: "Looking directly at the eclipse."
+img: caltech.png 
+caption: 
 permalink: people
 sidebar: true
 ---
