@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Results
+title: Discussion and Analysis
 description: Information about the project, website, and links to the paper and SI
 img: Tubulin_Infographic.png # Add image post (optional)
 caption: "A Serious Man (2010)"
