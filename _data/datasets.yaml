@@ -1,15 +1,15 @@
 - dataset:
-  storage: "remote"
-  name: Microtubule Time to Catastrophe Data for Labeled and Unlabeled Tubulin 
-  filetype: ".csv"
-  link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
+  storage: remote 
+  link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv
+  DOI:  "10.1016/j.cell.2011.10.037"
+  name: Microtubule Time to Catastrophe Data for Labeled and Unlabeled Tubulin
+  filetype: ".csv" 
   filesize: "5 KB"
-
+  
 - dataset:
-  storage: "remote"
-  name: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
-  filetype: "csv"
+  storage: remote 
   link: https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv
+  DOI:  "10.1016/j.cell.2011.10.037"
+  name: Microtubule Time to Catastrophe Data for Different Tubulin Concentrations
+  filetype: ".csv" 
   filesize: "11 KB"
-
-
