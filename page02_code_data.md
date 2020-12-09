@@ -46,7 +46,7 @@ sidebar: true
 {% else %}
 {% assign link = "{{ds.link}}" %}
 {% endif %}
-<a style="font-size: 0.9em;" href="{{link}}"> - {{ds.title}} </a><br/>
+<a style="font-size: 0.9em;" href="{{ds.link}}"> - {{ds.title}} </a><br/>
 {% endfor %}
 </div>
 </article>
