@@ -42,7 +42,7 @@ Analysis of Generative Model for Time to Catastrophe:  >
   We have our log-likehood functions for the parameters of each model.  Thus we can use parametric inference to calculate the MLEs for the parameters of the respective models.  One we obtain these MLEs, we then use them to generate bootstrap samples of the data out of our proposed generative models.  We then visualize this through predictive ECDFs, and the difference between the predictive ECDF's and the data's ECDF.  This is demonstrated in [Figure 3](https://neildsand.github.io/mt_project/figures/fig3.png).<br>
   
   
-  From the figure, we see that both models appear commensurate with the data.  From the predictive ECDFs, for lower times we see that the Poisson Model may deviate from the data.  This is clear in the difference plot.  Overall, judging from the difference plots, the Gamma model appears to be the model better suited for the data.  Thus, we conclude the time to catastrophe is Gamma Distributed.  The MLEs we calculated were $\alpha = 2.4$ and $\beta= 0.005$.
+  From [Figure 3](https://neildsand.github.io/mt_project/figures/fig3.png), we see that both models appear commensurate with the data.  From the predictive ECDFs, for lower times we see that the Poisson Model may deviate from the data.  This is clear in the difference plot.  Overall, judging from the difference plots, the Gamma model appears to be the model better suited for the data.  Thus, we conclude the time to catastrophe is Gamma Distributed.  The MLEs we calculated were $\alpha = 2.4$ and $\beta= 0.005$.
   
   
  
@@ -53,7 +53,7 @@ Analysis of Tubulin Concentration on Time to Catastrophe:  >
  In order to test this more concretely, we obtain parameter estimates for each tubulin concentration.  Because we previously established that the data followed a Gamma distribution, we obtain estimates for alpha and beta.  [Figure 5](https://neildsand.github.io/mt_project/figures/fig5.png) displays the confidence intervals for these parameters.  The bootstrapping technique employed provides a more reliable understanding than simply the ECDF of the data because it provides inference on how the results would change if the experiment were repeated.<br>
 
 
- From Figure 5, we are able to conclude that rate of catastrophe does not change with tubulin concentration.  We know that Beta is the rate of arrivals in Gamma distribution, so the fact that there is significant overlap in the confidence intervals for Beta indicates that this rate does not change accross the different concentrations. 
+ From [Figure 5](https://neildsand.github.io/mt_project/figures/fig5.png), we are able to conclude that rate of catastrophe does not change with tubulin concentration.  We know that Beta is the rate of arrivals in Gamma distribution, so the fact that there is significant overlap in the confidence intervals for Beta indicates that this rate does not change accross the different concentrations. 
   
 Acknowledgments: > 
   We would like to thank Justin Bois and BE/Bi 103a Fall 2020 TAs for all the instruction and assistance they provided. We would also like to thank Griffin Chure, whose website and repository template we used to create this site. 
