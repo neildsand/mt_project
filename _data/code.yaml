@@ -1,5 +1,15 @@
 - script:
-  name: mtanalysis
+  name: labeled_vs_unlabeled.py
   desc: >
-    Software package including all the code performed in this analysis.
+    Code that performs the analysis of labeled vs unlabeled tubulin in order to determine if the fluoresence affects microtubule catastrophes.
+    
+- script:
+  name: gamma_vs_poisson.py
+  desc: >
+    Code that performs the model assessment of the Gamma and Poisson models to determine which is better suited for the data.
+    
+- script:
+  name: tubulin_concentration.py
+  desc: >
+    Investigates the role of tubulin concentration in microtubule catastrophes.
 
