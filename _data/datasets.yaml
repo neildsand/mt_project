@@ -1,4 +1,4 @@
-  - dataset:
+- dataset:
   storage: remote 
   link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_time_to_catastrophe_dic_tidy.csv"
   DOI:  "10.1016/j.cell.2011.10.037"
@@ -6,7 +6,7 @@
   filetype: .csv 
   filesize: "5 KB"
   
-  - dataset:
+- dataset:
   storage: remote 
   link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv"
   DOI:  "10.1016/j.cell.2011.10.037"
