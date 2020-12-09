@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Code and Data
-img: python_code.png # Add image post (optional)
+img: code_img.png # Add image post (optional)
 permalink: code
 sidebar: true
 ---
