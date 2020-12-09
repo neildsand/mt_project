@@ -9,9 +9,9 @@ mtanalysis is a package that contains everything needed to reproduce these resul
 GNU GENERAL PUBLIC LICENSE
    Version 3, 29 June 2007
 
-Copyright (C) 2020 Dillon Holder
+Copyright (C) 2020 Dillon Holder <br>
 Free Software Foundation, Inc. <http://fsf.org/>
 Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
+of this license document, but changing it is not allowed.<br>
 
 Please see the License document for further information.
