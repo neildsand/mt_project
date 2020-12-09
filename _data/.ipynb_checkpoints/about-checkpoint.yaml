@@ -12,53 +12,37 @@
 title: >
   Analysis of Microtubule Catastrophe 
 authors: >
-  Author 1, Author 2, Author 3, Author 4
+  Dillon Holder, Neil Sanderson
 Abstract: >
-  This is a general purpose website template for conveying your data, code, and
-  overall scientific story to the general public! See the
-  [GitHub](https://github.com/gchure/reproducible_website) for the actual code
-  used to generate this website, along with lengthy documentation about how to use
-  it. This is meant to be used in tandem with the [GitHub repository template for
-  reproducible research](https://github.com/gchure/reproducible_research). The
-  Rest of this website is filled with dummy text (my favorite, [Hiptser
-  Ipsum](https://hipsum.co/)) for demonstrative purposes. It can even include
-  math like
-
-
-  $$S = k_b\ln \Omega. \tag{1}$$
-
-
-
-  Your abstract goes here.
-  Lorem ipsum dolor amet post-ironic aliquip next level vaporware, dolore
-  yuccie trust fund etsy officia blue bottle distillery ad. Raw denim swag
-  selvage wolf, direct trade air plant reprehenderit you probably haven’t heard
-  of them. Aute craft beer cray, pariatur la croix lumbersexual chillwave
-  fashion axe pug adipisicing woke banh mi. Hammock asymmetrical sustainable
-  keffiyeh biodiesel. Banjo trust fund leggings direct trade. Cronut plaid
-  shaman whatever, disrupt ad tofu minim pug dolore forage franzen glossier.
-  Small batch humblebrag ut, artisan health goth edison bulb voluptate lorem
-  dolore chillwave mumblecore iPhone craft beer ex. Enim fingerstache kale
-  chips, VHS succulents butcher meggings woke lo-fi mustache chicharrones chia
-  id consectetur. Gochujang taiyaki incididunt, chartreuse tumblr poutine banjo
-  culpa helvetica eu master cleanse migas umami. Dreamcatcher aliquip hexagon
-  disrupt deep v ugh, banjo truffaut distillery flannel la croix copper mug. Af
-  8-bit tattooed asymmetrical mumblecore swag direct trade iPhone disrupt
-  exercitation mixtape.
+  ABSTRACT GOES HERE.
 
 Introduction:  >
   Throughout the term, we explored the dataset investigated by Gardner, Zanic, et al.  Our goal was to investigate the dynamics of microtubule catastrophe, and more specifically, to gain insights around the time between the start of of growth for a microtubule to the catastrophe event.  Our analysis was centered around three main pieces.  First, we had to test the experimentally procedure.  Second, we developed a generative model for the time to catastrophe of the microtubules.  Finally, we explore the relationship between tubulin concentration and time to catastrophe.
   
 Analysis of Experimental Procedure:  >
-  In order to monitor microtubules, Gardner, Zanic, et al. labeled tubulin with a fluorescent marker.  Because we are interested in the time to microtubule catastrophe, it is important to ensure that fluorescent labels and exposure to laser light did not affect the microtubule dynamics which would compromise the results.  As such, Garner, Zanic, et al. performed an experiment using DIC microscopy in order to measure time to catastrophe for labeled and unlabeled tubulin.  Figure 1 demonstrates an ECDF with confidence intervals of this data.  From this inital ECDF, we already hypothesize that the labeled and unlabeled tubulin are distributed identically, meaning that the fluorescence is not affected the time to microtubule catastrophe, meaning the experimental procedure is sound.  In order to support this hypothesis, we used non-parametric inference in order to compute confidence intervals for the plug-in estimate for the mean time to catastrophe for each tubulin type.  Figure 2 displays these confidence intervals.  The overlap present provides additional support to our hypothesis.  Finally, we perform a null-hypothesis test under the null hypothesis that the distribution of microtubule catastrophe times with labeled tubulin is the same as unlabeled tubulin.  We use the difference of means as our test statistic, and compute a p-value of 0.77.  From the combination of all this analysis, we conclude that the labeled and unlabeled tubulin follow the same distribution and therefore we can accept the experimental procedure of fluorescent labeling.
+  In order to monitor microtubules, Gardner, Zanic, et al. labeled tubulin with a fluorescent marker.  Because we are interested in the time to microtubule catastrophe, it is important to ensure that fluorescent labels and exposure to laser light did not affect the microtubule dynamics which would compromise the results.  As such, Garner, Zanic, et al. performed an experiment using DIC microscopy in order to measure time to catastrophe for labeled and unlabeled tubulin.  [Figure 1](https://neildsand.github.io/mt_project/figures/fig1.png) demonstrates an ECDF with confidence intervals of this data.  From this inital ECDF, we already hypothesize that the labeled and unlabeled tubulin are distributed identically, meaning that the fluorescence is not affected the time to microtubule catastrophe, meaning the experimental procedure is sound.  In order to support this hypothesis, we used non-parametric inference in order to compute confidence intervals for the plug-in estimate for the mean time to catastrophe for each tubulin type.  Figure 2 displays these confidence intervals.  The overlap present provides additional support to our hypothesis.  Finally, we perform a null-hypothesis test under the null hypothesis that the distribution of microtubule catastrophe times with labeled tubulin is the same as unlabeled tubulin.  We use the difference of means as our test statistic, and compute a p-value of 0.77.  From the combination of all this analysis, we conclude that the labeled and unlabeled tubulin follow the same distribution and therefore we can accept the experimental procedure of fluorescent labeling.
   
 Analysis of Generative Model for Time to Catastrophe:  >
   
-  Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible models.  We will consider the model assumed by Gardner, Zanic, et al., that the microtubule catastrophe times are Gamma Distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson Model.  
+  Our next goal is to develop the generative model for microtubule time to catastrophe, for which we consider two possible models.  We will consider the model assumed by Gardner, Zanic, et al., that the microtubule catastrophe times are Gamma Distributed.  Second, we will assert that two biochemical processes happen in succession to trigger catastrophe, where each of them is a Poisson process. This will be reffered to as the Poisson Model.<b>  
   
-  Gamma distribution is well defined.  As such, our shorthand model is y ~ Gamma(alpha, beta), for which we know the PDF is f(y:alpha,beta) = 1/tau(alpha)*(beta*y)^alpha/y*e^(-beta*y).  We use this to write our log-likehood, ln(L(alpha,beta; y)) = ln(f(y;alpha,beta)).  
+  The Gamma distribution is well defined.  As such, our shorthand model is $y \approx Gamma(\alpha, \beta)$, for which we know the PDF is $f(y;\alpha, \beta) = \frac{1}{\Gamma(\alpha)}\,\frac{(\beta y)^\alpha}{y} \,\mathrm{e}^{-\beta y}$.  We use this to write our log-likehood, $ln(L(\alpha,\beta; y)) = ln(f(y;\alpha,\beta))$.  
   
-  For our Poisson Model, we need to derive the PDF.  (put in hw5.2c solutions)
+  For our Poisson Model, we need to derive the PDF.
+  Let $t_1$ be the time taken for the first process and $t_2$ to be the time taken from $t_1$ to the catastrophe event time, $t$. <br>
+  Each can be represented as an exponential distribution and hence be combined like so:<br>
+    $ f(t_1,t_2) = f(t_1)f(t_2) $ <br>
+    $ f(t_1,t_2) = \beta_1\beta_2e^{-\beta_1t_1}e^{-\beta_2t_2} $ <br>
+
+    Then using a change of variables we rewrite the function in terms of $t_1$ and $t$:<br>
+    $ t = t_1 + t_2 $ <br>
+    $ t_2 = t - t_1 $ <br>
+    $ f(t_1,t) = \beta_1\beta_2e^{-\beta_1t_1}e^{\beta_2(t-t_1)} $ <br>
+
+    The final step to get the pdf in terms of $t$ only we use marginalization by integrating the above function with respect to $t_1$ from 0 to $t$:<br>
+    $ f(t) = \int_{0}^{t} f(t_1,t) \,dt_1 $ <br>
+    $ f(t) = \int_{0}^{t} \beta_1\beta_2e^{-\beta_1t_1}e^{-\beta_2(t-t_1)} \,dt_1 $ <br>
+    $ \boxed{f(t) = \frac{\beta_1\beta_2}{\beta_2-\beta_1}(e^{-\beta_1t} - e^{-\beta_2t}) }$<br>
   
   In order to assess the two models, we want to understand how well matched the proposed generative model is to the actual generative model, which is unknown.  What we do know however, is what data the actual generative model generates, so we will compare data generated by our generative models to the actual data.  
   
@@ -72,6 +56,4 @@ Analysis of Tubulin Concentration on Time to Catastrophe:  >
  In order to test this more concretely, we obtain parameter estimates for each tubulin concentration.  Because we previously established that the data followed a Gamma distribution, we obtain estimates for alpha and beta.  Figure 5 displays the confidence intervals for these parameters.  The bootstrapping technique employed provides a more reliable understanding than simply the ECDF of the data because it provides inference on how the results would change if the experiment were repeated.  From Figure 5, we are able to conclude that rate of catastrophe does not change with tubulin concentration.  We know that Beta is the rate of arrivals in Gamma distribution, so the fact that there is significant overlap in the confidence intervals for Beta indicates that this rate does not change accross the different concentrations. 
   
 Acknowledgments: > 
-  Who helped you? Share the love! Valeria Rivera, Destiny Roach, Alberto 
-  Fernandez, Trenton Rowland, Sherlyn Frederick, Mallory Irwin, Jazmyn Cohen,
-  Jaylene Page, Kelsey Hayes, Sonny Wilson, Roy Taylor, Ryleigh Daugherty.
+  Justin Bois, Griffin Chure, and the BE/Bi 103a Fall 2020 TAs
