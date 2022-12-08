@@ -35,7 +35,7 @@ boto==2.49.0
 Bottleneck==1.3.2
 brotlipy==0.7.0
 Cartopy @ file:///Users/runner/miniforge3/conda-bld/cartopy_1603098814490/work
-certifi==2020.12.5
+certifi==2022.12.7
 cffi @ file:///opt/concourse/worker/volumes/live/b9607b09-b777-4ff7-53dc-287727eb8574/volume/cffi_1600699191154/work
 cftime @ file:///opt/concourse/worker/volumes/live/be4e1388-f441-4805-4f65-8527069c60e4/volume/cftime_1595380105609/work
 chardet==3.0.4
